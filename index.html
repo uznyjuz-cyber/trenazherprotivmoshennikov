@@ -901,7 +901,7 @@ async function getCallerResponse(isFirst) {
 
     if (isFirst) conversationHistory = [];
     const messages = isFirst
-      ? [{ role: 'user', content: 'Начни звонок — скажи первую фразу мошенника.' }]
+      ? [{ role: 'user', content: 'Начни звонок — скажи первую фразу мошенника. Старайся не представляться именем' }]
       : conversationHistory;
 
     let partialAccum = '';
@@ -914,7 +914,7 @@ async function getCallerResponse(isFirst) {
 
     if (isFirst) {
       conversationHistory = [
-        { role: 'user', content: 'Начни звонок — скажи первую фразу мошенника.' },
+        { role: 'user', content: 'Начни звонок — скажи первую фразу мошенника. Старайся не представляться именем' },
         { role: 'assistant', content: callerText }
       ];
     } else {
